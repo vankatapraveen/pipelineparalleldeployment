@@ -1,8 +1,7 @@
 # Multiple Stages
 
 
-JENKINSFILE3
-```
+
 pipeline {
     agent any
     stages {
