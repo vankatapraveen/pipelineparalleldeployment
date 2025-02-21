@@ -23,7 +23,23 @@ pipeline {
         }
         stage('Regression tests') {
             steps {
-                bat 'echo Running E2E tests'
+                parallel{
+                        stage('chrome') {
+                            steps {
+                                bat 'echo Running E2E tests on chrome'
+                            }
+                        }
+                        stage('firefox') {
+                            steps {
+                                bat 'echo Running E2E tests on chrome'
+                            }
+                        }
+                        stage('safari') {
+                            steps {
+                                bat 'echo Running E2E tests on chrome'
+                            }
+                        }
+                }
             }
         }
         stage('Release to prod') {
@@ -38,6 +54,3 @@ pipeline {
         }
     }
 }
-
-
-
