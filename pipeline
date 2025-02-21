@@ -1,7 +1,3 @@
-# Multiple Stages
-
-
-
 pipeline {
     agent any
     stages {
